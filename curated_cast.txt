@@ -1,0 +1,940 @@
+king france
+duke florence
+bertram
+count rousillon
+lafeu
+parolles
+steward
+lavache
+page
+countess rousillon
+helena
+diana
+violenta
+mariana
+clown
+mark antony
+octavius caesar
+m aemilius lepidus
+sextus pompeius
+domitius
+enobarbus
+ventidius
+eros
+scarus
+dercetas
+demetrius
+philo
+maecenas
+agrippa
+dolabella
+proculeius
+thyreus
+gallus
+menas
+menecrates
+varrius
+taurus
+canidius
+silius
+euphronius
+alexas
+mardian
+seleucus
+diomedes
+soothsayer
+clown
+cleopatra
+octavia
+charmian
+iras
+duke
+frederick
+amiens
+jaques
+le beau
+charles
+oliver
+jaques
+orlando
+adam
+dennis
+touchstone
+oliver martext
+corin
+silvius
+william
+rosalind
+celia
+phebe
+audrey
+solinus
+aegeon
+antipholus ephesus
+antipholus syracuse
+aegion
+aemelia
+dromio ephesus
+dromio syracuse
+antipholuses
+balthazar
+angelo
+pinch
+aemilia
+adriana
+luciana
+luce
+adriana
+courtezan
+caius marcius
+titus lartius
+cominius
+menenius agrippa
+sicinius velutus
+junius brutus
+young marcius
+roman herald
+nicanor
+tullus aufidius
+conspirators
+adrian
+citizen
+volumnia
+virgilia
+valeria
+gentlewoman
+patricians
+aediles
+lictors
+cymbeline
+cloten
+posthumus leonatus
+belarius
+guiderius
+arviragus
+polydore
+cadwal
+philario
+iachimo
+french gentleman
+caius lucius
+roman captain
+two british captains
+pisanio
+cornelius
+two lords cymbelines court
+two gentlemen same
+two gaoler
+queen
+imogen
+helen
+apparitions
+claudius marcellus
+officer
+hamlet
+polonius
+horatio
+laertes
+voltemand
+cornelius
+rosencrantz
+guildenstern
+osric
+gentleman
+priest
+marcellus
+bernardo
+francisco
+reynaldo
+two clowns
+gravediggersm fortinbras
+norwegian captain
+getrude
+ophelia
+ghost hamlets father
+henry
+prince wales
+prince john lancaster
+walter blunt
+thomas percy
+henry percy
+henry percy
+edmund mortimer
+richard scroop
+archibald
+owen glendower
+richard vernon
+john falstaff
+michael
+poins
+gadshill
+peto
+bardolph
+lady percy
+lady mortimer
+mistress quickly
+lords
+officers
+sheriff
+vintner
+chamberlain
+drawers
+two carriers
+travellers
+and attendants rumour
+henry
+prince wales
+prince john lancaster prince humphrey gloucester thomas
+duke clarence
+earl northumberland
+scroop
+archbishop york
+lord mowbray
+lord hastings
+lord bardolph
+john colville
+travers
+morton
+earl warwick
+earl westmoreland
+earl surrey
+earl kent
+gower
+harcourt
+blunt
+lord chief justice servant
+john falstaff
+edward poins
+bardolph
+pistol
+peto
+page
+robert shallow and silence
+davy
+fang
+snare
+ralph mouldy
+simon shadow
+thomas wart
+francis feeble
+peter bullcalf
+francis
+lady northumberland
+lady percy
+hostess quickly
+doll tearsheet
+lords
+attendants
+porter
+drawers
+beadles
+grooms
+servants
+duke gloucester
+duke bedford
+thomas beaufort
+duke exeter
+henry beaufort
+bishop winchester
+
+cardinal
+john beaufort
+earl somerset
+duke
+richard plantagenet
+duke york
+earl warwick
+earl salisbury
+earl suffolk
+lord talbot
+earl shrewsbury
+john talbot
+edmund mortimer
+earl march
+john fastolfe
+william lucy
+william glansdale
+thomas gargrave
+mayor london
+woodville
+vernon
+basset
+lawyer
+gaolers
+charles
+dauphin
+reignier
+duke anjou
+duke burgundy
+duke alencon
+bastard orleans
+governor paris
+mastergunner orleans
+general french forces
+french sergeant
+porter
+an old shepherd
+margaret
+countess auvergne
+joan lpucelle
+lords
+warders tower
+heralds
+officers
+soldiers
+messengers
+english and french attendants
+fiends appearing to lpucelle
+king henry sixth
+humphrey
+duke gloucester
+cardinal beaufort
+bishop winchester
+richard plantagenet
+duke york
+edward and richard
+duke somerset
+duke suffolk
+duke buckingham
+lord clifford
+young clifford
+earl salisbury
+earl warwick
+lord scales
+lord say
+humphrey stafford
+william stafford
+john stanley
+vaux
+matthew goffe
+lieutenant
+shipmaster
+masters mate
+and walter whitmore
+two gentlemen
+john hume
+john southwell
+roger bolingbroke
+spirit
+thomas horner
+peter
+clerk chatham
+mayor saint albans
+saunder simpcox
+alexander iden
+jack cade
+george bevis
+john holland
+dick butcher
+smith weaver
+michael
+two murderers
+margaret
+eleanor
+margery jourdain
+wife
+king henry sixth
+edward
+prince wales
+lewis xi
+king france
+duke somerset duke exeter
+earl oxford
+earl northumberland
+earl westmoreland
+lord clifford
+richard plantagenet
+duke york
+edward
+earl march
+edmund
+earl rutland
+george
+richard
+duke gloucester
+duke norfolk
+marquis montague
+earl warwick
+earl pembroke
+lord hastings
+lord stafford
+john mortimer
+hugh mortimer
+henry
+earl richmond
+lord rivers
+william stanley john montgomery
+john somerville
+tutor
+mayor york
+lieutenant tower nobleman
+two keepers
+huntsman
+son
+father
+queen margaret
+lady grey
+bona
+king henry eighth
+cardinal wolsey
+cardinal campeius
+capucius
+cranmer
+duke norfolk
+duke buckingham
+duke suffolk
+earl surrey
+lord chamberlain
+lord chancellor
+gardiner
+bishop lincoln
+lord abergavenny
+lord sandys
+henry guildford
+thomas lovell
+anthony denny
+nicholas vaux
+secretaries to wolsey
+cromwell
+griffith
+three gentlemen
+doctor butts
+garter kingatarms
+surveyor
+brandon
+doorkeeper
+porter
+crier queen katharine
+anne bullen
+an old lady
+patience
+king john
+prince henry
+arthur
+duke britaine
+earl pembroke
+earl essex
+earl salisbury
+lord bigot
+hubert de burgh
+robert faulconbridge
+philip bastard
+james gurney
+peter pomfret
+king philip france
+lewis
+dauphin
+lymoges
+cardinal pandulph
+melun
+chatillon
+queen elinor
+constance
+blanch spain
+lady faulconbridge
+julius caesar
+octavius
+triumvir
+augustus caesar
+mark antony
+lepidus
+marcus brutus
+cassius
+casca
+trebonius
+caius ligarius
+decius brutus
+metellus cimber
+cinna
+calpurnia
+portia
+cicero
+popilius
+popilius lena
+flavius
+marullus
+cato
+lucilius
+titinius
+messala
+volumnius
+artemidorus
+cinna
+varro
+clitus
+claudio
+strato
+lucius
+dardanius
+pindarus
+ghost caesar
+soothsayer
+poet
+senators
+citizens
+soldiers
+commoners
+messengers
+servants
+lear
+king britain
+king france
+duke burgundy
+duke cornwall
+duke albany
+earl kent
+earl gloucester
+edgar
+edmund
+curan
+old man
+doctor
+lears fool
+oswald
+gentlemen
+herald
+servants to cornwall
+goneril
+regan
+cordelia
+knights attending on lear
+officers
+messengers
+soldiers
+attendantsferdinand
+king navarre
+berowne
+longaville
+dumain
+boyet
+marcade
+don adriano de armado
+nathaniel
+holofernes
+dull
+costard
+moth
+forester
+princess france
+rosaline
+maria
+katharine
+jaquenetta
+lords
+attendants
+duncan
+macbeth
+thane glamis and cawdor
+lady macbeth
+macduff
+thane fife
+lady macduff
+malcolm
+donalbain
+banquo
+thane lochaber
+fleance
+lennox
+ross
+menteith
+angus
+caithness
+siward
+earl northumberland
+young siward
+seyton
+hecate
+three witches
+boy
+gentlewoman
+an english doctor
+scottish doctor
+sergeant
+porter
+an old man
+ghost banquo
+lords
+gentlemen
+officers
+soldiers
+murtherers
+attendants
+messengers vincentio
+angelo
+escalus
+claudio
+lucio
+varrius
+provost
+thomas
+peter
+justice
+elbow
+froth
+pompey
+abhorson
+barnardine
+isabella
+mariana
+juliet
+francisca
+mistress overdone
+duke venice
+prince morocco
+prince arragon
+antonio
+bassanio
+solanio
+salerio
+gratiano
+lorenzo
+shylock
+tubal
+launcelot gobbo
+old gobbo
+leonardo
+balthasar
+stephano
+portia
+nerissa
+jessica
+john falstaff
+fenton
+shallow
+slender
+ford
+page
+william page
+hugh evans
+doctor caius
+bardolph
+pistol
+nym
+robin
+simple
+rugby
+mistress ford
+mistress page
+mistress anne page
+mistress quickly
+servants to page
+ford
+theseus
+egeus
+lysander
+demetrius
+philostrate
+quince
+snug
+bottom
+flute
+snout
+starveling
+hippolyta
+hermia
+helena
+oberon
+titania
+puck
+robin goodfellow
+peaseblossom
+cobweb
+moth
+mustardseed
+don pedro
+don john
+claudio
+benedick
+leonato
+antonio
+balthasar
+borachio
+conrade
+friar francis
+dogberry
+constable
+verges
+headborough
+sexton
+boy
+hero
+beatrice
+margaret
+ursula
+othello
+moor
+desdemona
+iago
+emilia
+cassio
+duke venice brabantio
+gratiano
+lodovico
+roderigo
+bianca
+montano
+clown
+king richard second
+john gaunt
+edmund langley
+henry
+duke aumerle
+thomas mowbray
+duke surrey
+earl salisbury
+earl berkeley
+bushy
+bagot
+green
+earl northumberland
+henry percy
+hotspur
+lord ross
+lord willoughby
+lord fitzwater
+bishop carlisle
+abbot westminster
+lord marshal
+stephen scroop
+pierce exton
+captain
+two gardeners
+queen
+duchess york
+duchess gloucester
+duke gloucester
+edward
+richard
+george
+richard
+young son clarence
+henry
+cardinal bourchier
+thomas rotherham
+john morton
+duke buckingham
+duke norfolk
+earl surrey
+earl rivers
+marquis dorset
+lord grey
+earl oxford
+lord hastings
+lord lovel
+lord stanley
+thomas vaughan
+richard ratcliff
+william catesby
+james tyrrel
+james blount
+walter herbert
+william brandon
+robert brakenbury
+christopher urswick
+lord mayor london
+sheriff wiltshire
+hastings
+tressel
+berkeley
+elizabeth
+margaret
+duchess york
+lady anne
+henry vi
+ghosts
+chorus
+escalus
+paris
+montague
+capulet
+romeo
+tybalt
+mercutio
+benvolio
+tybalt
+friar laurence
+friar john
+balthasar
+abram
+sampson
+gregory
+peter
+an apothecary
+three musicians
+an officer
+lady montague
+lady capulet
+juliet
+nurse
+lord
+christopher sly
+hostess
+page
+players
+huntsmen
+servants
+baptistminola
+vincentio
+lucentio
+petruchio
+gremio
+hortensio
+tranio
+biondello
+grumio
+curtis
+pedant
+katherina
+bianca
+widow tailor
+haberdasher
+petruchio
+alonso
+sebastian
+prospero
+antonio
+ferdinand
+gonzalo
+adrian
+francisco
+caliban
+trinculo
+stephano
+master ship
+boatswain
+mariners
+miranda
+ariel
+iris
+ceres
+juno
+nymphs
+reapers
+timon
+lucius
+lucullus
+sempronius
+ventidius
+alcibiades
+apemantus
+flavius
+flaminius
+lucilius
+servilius
+caphis
+philotus
+titus
+hortensius
+poet
+painter
+jeweller
+merchant
+mercer
+an old athenian
+three strangers
+page
+fool
+phrynia
+timandra
+cupid
+amazons
+saturninus
+bassianus
+titus andronicus
+marcus andronicus
+lucius
+quintus
+martius
+mutius
+young lucius
+publius
+sempronius
+caius
+valentine
+aemilius
+alarbus
+demetrius
+chiron
+aaron
+captain
+messenger
+clown
+tamora
+lavinia
+nurse
+priam
+hector
+troilus
+paris
+deiphobus
+helenus
+margarelon
+aeneas
+antenor
+calchas
+pandarus
+agamemnon
+menelaus
+achilles
+ajax
+ulysses
+nestor
+diomedes
+patroclus
+thersites
+alexander
+servant
+helen
+andromache
+cassandra
+cressida
+orsino
+sebastian
+antonio
+secaptain
+valentine
+curio
+toby belch
+andrew aguecheek
+malvolio
+fabian
+feste
+olivia
+viola
+maria
+duke milan
+valentine
+proteus
+antonio
+thurio
+eglamour
+speed
+launce
+panthino
+host
+outlaws
+julia
+silvia
+lucetta
+servants
+musicians
+leontes
+mamillius
+camillo
+antigonus
+cleomenes
+dion
+polixenes
+florizel
+archidamus
+old shepherd
+clown
+autolycus
+mariner
+gaoler
+hermione
+perdita
+paulina
+emilia
+mopsa
+dorcas
