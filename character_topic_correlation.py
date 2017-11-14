@@ -13,7 +13,7 @@ def main():
 
     parser.add_argument("-i", "--infile", help="Input text file (corpus)", required=True)
     parser.add_argument("-c", "--cast", help="Cast file", required=True)
-    parser.add_argument("-p", "--plotsave", help="Location to save heatmap image", default=None)
+    parser.add_argument("-p", "--plotsave", help="Directory in which to save heatmap and topic word distributions", default=None)
     parser.add_argument("-k", "--num_topics", help="Number of topics", type=int, default=5)
     parser.add_argument("-n", "--num_iterations", help="Number of LDA iterations", type=int, default=500)
     parser.add_argument("-t", "--topic_words", help="Number of top words per topic to print", type=int, default=10)
@@ -24,7 +24,7 @@ def main():
     run(options.infile, options.cast, options.plotsave, options.num_topics, options.num_iterations, options.topic_words, options.verbose)
 
 
-def run(infile, castfile, savefile=None, num_topics=5, num_iterations=500, num_topic_words=10, verbose=False):
+def run(infile, castfile, savepath=None, num_topics=5, num_iterations=500, num_topic_words=10, verbose=False):
     if verbose:
         print "Parsing files"
     sections = utils.parse_file_to_sections(infile)
@@ -53,12 +53,13 @@ def run(infile, castfile, savefile=None, num_topics=5, num_iterations=500, num_t
     if verbose:
         print "----Calculated"
 
-    
+    if savepath:
+        utils.save_topic_distributions(vectorizer, lda_model, num_topic_words, savepath)
     utils.print_top_topic_words(lda_model, vectorizer.get_feature_names(), num_topic_words)
 
     if verbose:
         print "Plotting heatmap"
-    plot_heatmap(coeffs, characters, savefile)
+    plot_heatmap(coeffs, characters, savepath)
 
     return data, vectorizer, lda_model, characters, coeffs, pvals
 
@@ -84,13 +85,13 @@ def calculate_correlations(clean_sections, characters, lda_model):
 
 
 
-def plot_heatmap(correlations, characters, savefile=None):
+def plot_heatmap(correlations, characters, savepath=None):
     # Ref: https://plot.ly/python/heatmaps/
     topic_titles = ["Topic {}".format(i) for i in xrange(correlations.shape[1])]
     fig = plt.figure()
     r = sbn.heatmap(correlations, cmap="BuPu", xticklabels=topic_titles, yticklabels=characters)
-    if savefile:
-        plt.savefig(savefile)
+    if savepath:
+        plt.savefig("{}/character_correlation_heatmap.pdf".format(savepath))
     plt.show()
 
 

@@ -1,11 +1,14 @@
 #!/usr/bin/python
 
+import os
 import lda
 import nltk
 import string
 import numpy as np
 import parse_corpus
+import seaborn as sbn
 
+from matplotlib import pyplot as plt
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
@@ -107,6 +110,32 @@ def print_top_topic_words(model, vocab, n_top_words=10):
     for i, topic_dist in enumerate(topic_word):
         topic_words = vocab_array[np.argsort(topic_dist)][:-(n_top_words+1):-1]
         print('Topic {}: {}'.format(i, ' '.join(topic_words)))
+
+
+def save_topic_distributions(vectorizer, lda_model, n_plotted, savebase):
+    sbn.mpl.rc("figure", figsize=(0.25 * n_plotted,2))
+    topic_word = lda_model.topic_word_
+    # savebase = "figures/topic_distributions_{}/".format(len(topic_word))
+
+    vocab = vectorizer.get_feature_names()
+
+    if not os.path.exists(savebase):
+        os.makedirs(savebase)
+
+    vocab_array = np.array(vocab)
+
+    for i, topic_dist in enumerate(topic_word):
+        top_words = vocab_array[np.argsort(topic_dist)][:-(n_plotted+1):-1]
+        top_probs = topic_dist[np.argsort(topic_dist)][:-(n_plotted+1):-1]
+        ax = sbn.barplot(x=top_words, y=top_probs, palette="Blues_r")
+        ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
+        ax.get_yaxis().set_visible(False)
+        ax.ylabel = "Probability Mass"
+        ax.set_title("Topic {}".format(i))
+        plt.tight_layout()
+        plt.savefig(savebase + "topic_{}.png".format(i))
+        plt.clf()
+        # plt.show()
 
 
 
