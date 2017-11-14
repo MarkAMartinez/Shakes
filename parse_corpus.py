@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import nltk
 import numpy
 import argparse
