@@ -16,14 +16,15 @@ def main():
     parser.add_argument("-p", "--plotsave", help="Location to save heatmap image", default=None)
     parser.add_argument("-k", "--num_topics", help="Number of topics", type=int, default=5)
     parser.add_argument("-n", "--num_iterations", help="Number of LDA iterations", type=int, default=500)
+    parser.add_argument("-t", "--topic_words", help="Number of top words per topic to print", type=int, default=10)
     parser.add_argument("-v", "--verbose", help="Verbose logging", action="store_true")
 
     options = parser.parse_args()
 
-    run(options.infile, options.cast, options.plotsave, options.num_topics, options.num_iterations, options.verbose)
+    run(options.infile, options.cast, options.plotsave, options.num_topics, options.num_iterations, options.topic_words, options.verbose)
 
 
-def run(infile, castfile, savefile=None, num_topics=5, num_iterations=500, verbose=False):
+def run(infile, castfile, savefile=None, num_topics=5, num_iterations=500, num_topic_words=10, verbose=False):
     if verbose:
         print "Parsing files"
     sections = utils.parse_file_to_sections(infile)
@@ -51,6 +52,11 @@ def run(infile, castfile, savefile=None, num_topics=5, num_iterations=500, verbo
 
     if verbose:
         print "----Calculated"
+
+    
+    utils.print_top_topic_words(lda_model, vectorizer.get_feature_names(), num_topic_words)
+
+    if verbose:
         print "Plotting heatmap"
     plot_heatmap(coeffs, characters, savefile)
 

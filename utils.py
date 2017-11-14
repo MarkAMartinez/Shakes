@@ -99,6 +99,16 @@ def calculate_character_counts(clean_sections, chars):
     return counts
 
 
+def print_top_topic_words(model, vocab, n_top_words=10):
+    topic_word = model.topic_word_
+
+    vocab_array = np.array(vocab)
+
+    for i, topic_dist in enumerate(topic_word):
+        topic_words = vocab_array[np.argsort(topic_dist)][:-(n_top_words+1):-1]
+        print('Topic {}: {}'.format(i, ' '.join(topic_words)))
+
+
 
 
 
