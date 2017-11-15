@@ -133,7 +133,7 @@ def save_topic_distributions(vectorizer, lda_model, n_plotted, savebase):
         ax.ylabel = "Probability Mass"
         ax.set_title("Topic {}".format(i))
         plt.tight_layout()
-        plt.savefig(savebase + "topic_{}.png".format(i))
+        plt.savefig(savebase + "topic_{}.pdf".format(i))
         plt.clf()
         # plt.show()
 
