@@ -51,7 +51,7 @@ def run(infile, castfile, savepath=None, num_topics=5, num_iterations=500, num_t
         print "----Trained"
         print "Calculating correlation"
     coeffs, pvals, bh_fdrs = calculate_correlations(clean_sections_with_chars, characters, lda_model)
-    # annotations = generate_heatmap_annotations(coeffs, bh_fdrs)
+    annotations = generate_heatmap_annotations(coeffs, bh_fdrs)
 
 
     if verbose:
@@ -96,22 +96,22 @@ def plot_heatmap(correlations, bh_fdrs, characters, threshold=0.1, savepath=None
     # print np.array(annotations)
     topic_indices = range(correlations.shape[1])
 
-    # if threshold:
-    #     mask = calculate_accepted_values(correlations, threshold)
-    #     row_accept = [i for i in xrange(mask.shape[0]) if mask[i].any()]
-    #     col_accept = [i for i in xrange(mask.shape[1]) if mask[:,i].any()]
-    #     # row_accept = [mask[i].any() for i in xrange(mask.shape[0])]
-    #     # col_accept = [mask[:,i].any() for i in xrange(mask.shape[1])]
-    #     correlations = correlations[row_accept][:,col_accept]
-    #     print len(row_accept)
-    #     print len(col_accept)
-    #     print correlations
-    #     print correlations.shape
-    #     characters = np.array(characters)[row_accept]
-    #     topic_indices = np.array(topic_indices)[col_accept]
-    #     bh_fdrs = bh_fdrs[row_accept][:,col_accept]
+    if threshold:
+        mask = calculate_accepted_values(correlations, threshold)
+        row_accept = [i for i in xrange(mask.shape[0]) if mask[i].any()]
+        col_accept = [i for i in xrange(mask.shape[1]) if mask[:,i].any()]
+        # row_accept = [mask[i].any() for i in xrange(mask.shape[0])]
+        # col_accept = [mask[:,i].any() for i in xrange(mask.shape[1])]
+        correlations = correlations[row_accept][:,col_accept]
+        # print len(row_accept)
+        # print len(col_accept)
+        # print correlations
+        # print correlations.shape
+        characters = np.array(characters)[row_accept]
+        topic_indices = np.array(topic_indices)[col_accept]
+        bh_fdrs = bh_fdrs[row_accept][:,col_accept]
 
-    # annotations = generate_heatmap_annotations(correlations, bh_fdrs)
+    annotations = generate_heatmap_annotations(correlations, bh_fdrs)
 
     topic_titles = ["Topic {}".format(i) for i in topic_indices]
     fig = plt.figure()
@@ -156,25 +156,37 @@ def generate_heatmap_annotations(coefficients, pvals):
             # new_annot += "{0:.4f}".format(coefficients[i,j])
             # new_annot += ", "
             # new_annot += "{0:.4f}".format(pvals[i,j])
-            annotations[i][j] = "{0:.4f}, {1:.4f}".format(coefficients[i,j], pvals[i,j])
+            annotations[i][j] = "{0:.3f}, {1:.3f}".format(coefficients[i,j], pvals[i,j])
             # annotations[i][j] = new_annot
 
     return annotations
 
 
 def calculate_accepted_values(values, cutoff):
-    print "!!!!!!!!!!!"
-    print cutoff
-    svals = sorted(values.flatten(), key=lambda x: abs(x))
-    cutoff_val = svals[int(len(svals) * (1-cutoff))]
-    print cutoff_val
+    # print "!!!!!!!!!!!"
+    # print cutoff
+    row_maxes = np.max(values, axis=1)
+    row_maxes[np.isnan(row_maxes)] = 0
+    # print row_maxes
+    # svals = sorted(values.flatten(), key=lambda x: abs(x))
+    svals = sorted(row_maxes.flatten(), key=lambda x: abs(x))
+    # TODO There are are some serious bugs here it seems...
+    #      Any potential nan issues here? NaNs are definitely showing up later on.
+    #      Even sorted doesn't seem to be working right though...
+    # print svals
+    # print len(svals)
+    if cutoff < 1.0:
+        cutoff_val = svals[int(len(svals) * (1-cutoff))]
+    else:
+        cutoff_val = svals[len(svals) - int(cutoff)]
+    # print cutoff_val
 
     testvals = np.array(values)
     testvals[np.isnan(testvals)] = 0
 
     mask = np.abs(testvals) >= cutoff_val
-    print mask.all()
-    print "!!!!!!!!!!!!!!!"
+    # print mask.all()
+    # print "!!!!!!!!!!!!!!!"
     # row_accept = [mask[i].any() for i in xrange(mask.shape[0])]
     # col_accept = [mask[:,i].any() for i in xrange(mask.shape[1])]
 
