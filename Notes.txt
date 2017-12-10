@@ -1,0 +1,3 @@
+Notes:
+
+Ordinal words like "First, Second" just remove

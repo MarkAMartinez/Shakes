@@ -1,0 +1,33 @@
+DUNCAN
+MACBETH
+LADY MACBETH
+MACDUFF
+LADY MACDUFFe
+MALCOLM
+DONALBAIN
+BANQUO
+FLEANCE
+LENNOX
+ROSS
+MENTEITH
+ANGUS
+CAITHNESS
+SIWARD
+YOUNG SIWARD
+SEYTON  
+HECATE
+Witch
+Boy
+Gentlewoman
+Doctor
+Doctor
+Sergeant
+Porter
+Old Man
+Lord
+Gentlemen
+Officer
+Soldier
+Murtherer
+Attendant
+Messenger
