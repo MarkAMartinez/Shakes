@@ -112,6 +112,23 @@ def print_top_topic_words(model, vocab, n_top_words=10):
         print('Topic {}: {}'.format(i, ' '.join(topic_words)))
 
 
+def find_top_word_dictset(model, vocab, n_top_words=10):
+    dictset = {}
+
+    topic_word = model.topic_word_
+
+    vocab_array = np.array(vocab)
+
+    for i, topic_dist in enumerate(topic_word):
+        topic_words = vocab_array[np.argsort(topic_dist)][:-(n_top_words+1):-1]
+        for w in topic_words:
+            if not w in dictset:
+                dictset[w] = 0
+            dictset[w] += 1
+    
+    return dictset
+
+
 def save_topic_distributions(vectorizer, lda_model, n_plotted, savebase):
     sbn.mpl.rc("figure", figsize=(0.25 * n_plotted,2))
     topic_word = lda_model.topic_word_
@@ -136,6 +153,21 @@ def save_topic_distributions(vectorizer, lda_model, n_plotted, savebase):
         plt.savefig(savebase + "topic_{}.pdf".format(i))
         plt.clf()
         # plt.show()
+
+
+def calc_jaccard_nocount(left, right):
+    isect = {}
+    un = {}
+
+    for w in left:
+        if w in right:
+            isect[w] = True
+        un[w] = True
+    
+    for w in right:
+        un[w] = True
+
+    return float(len(isect)) / float(len(un))
 
 
 
