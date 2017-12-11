@@ -27,18 +27,25 @@ def process(filename):
 
     newsec = []
 
+    playtitles = []
+    to_add_title = ""
+
     for line in infile:
         if line.startswith("--------"):
             to_add = clean_section(newsec)
-            if len(to_add) > 0:
-                sections.append(to_add)
+            if len(to_add) > 1:
+                sections.append(to_add[1:])
+                playtitles.append(to_add_title)
             newsec = []
+            to_add_title = ""
+        elif line.startswith("!!!!"):
+            to_add_title = line.strip()[4:].strip('\n').split("{")[0]
         else:
             newsec.append(line)
 
     infile.close()
 
-    return sections
+    return sections, playtitles
 
     # Ref: http://scikit-learn.org/stable/modules/feature_extraction.html
     # vectorizer = CountVectorizer(tokenizer=nltk.word_tokenize)

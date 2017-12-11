@@ -12,13 +12,13 @@ from statsmodels.sandbox.stats.multicomp import multipletests
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-i", "--infile", help="Input text file (corpus)", required=True)
-    parser.add_argument("-c", "--cast", help="Cast file", required=True)
+    parser.add_argument("-i", "--infile", help="Input text file (corpus)", default="preprocessed_shakespeare.txt")
+    parser.add_argument("-c", "--cast", help="Cast file", default="aggregate_curated_cast.txt")
     parser.add_argument("-p", "--plotsave", help="Directory in which to save heatmap and topic word distributions", default=None)
     parser.add_argument("-k", "--num_topics", help="Number of topics", type=int, default=5)
     parser.add_argument("-n", "--num_iterations", help="Number of LDA iterations", type=int, default=500)
     parser.add_argument("-t", "--topic_words", help="Number of top words per topic to print", type=int, default=10)
-    parser.add_argument("-r", "--correlation_threshold", help="Portion of restults to plot in heatmap", type=float, default=0.1)
+    parser.add_argument("-r", "--correlation_threshold", help="Portion of restults to plot in heatmap", type=float, default=40)
     parser.add_argument("-v", "--verbose", help="Verbose logging", action="store_true")
 
     options = parser.parse_args()
@@ -29,7 +29,7 @@ def main():
 def run(infile, castfile, savepath=None, num_topics=5, num_iterations=500, num_topic_words=10, restrict_portion=0.1, verbose=False):
     if verbose:
         print "Parsing files"
-    sections = utils.parse_file_to_sections(infile)
+    sections, titles = utils.parse_file_to_sections_and_titles(infile)
     castdict = utils.parse_castfile_to_dict(castfile)
     characters = sorted(castdict.keys())
     if verbose:
@@ -60,6 +60,10 @@ def run(infile, castfile, savepath=None, num_topics=5, num_iterations=500, num_t
     if savepath:
         utils.save_topic_distributions(vectorizer, lda_model, num_topic_words, savepath)
     utils.print_top_topic_words(lda_model, vectorizer.get_feature_names(), num_topic_words)
+
+    if verbose:
+        print "Calculating document distributions"
+    plot_document_distributions(lda_model, titles, num_topics, savepath)
 
     if verbose:
         print "Plotting heatmap"
@@ -119,6 +123,41 @@ def plot_heatmap(correlations, bh_fdrs, characters, threshold=0.1, savepath=None
     r = sbn.heatmap(correlations, cmap="BuPu", xticklabels=topic_titles, yticklabels=characters)
     if savepath:
         plt.savefig("{}/character_correlation_heatmap.pdf".format(savepath))
+    plt.show()
+
+
+def plot_document_distributions(lda_model, titles, num_topics, savepath=None):
+    doc_topic = lda_model.doc_topic_
+
+
+    topic_titles = ["Topic {}".format(i) for i in xrange(num_topics)]
+
+    unique_titles = sorted(list(set(titles)))
+
+    revdict = {}
+    for i, t in enumerate(unique_titles):
+        revdict[t] = i
+
+    scene_count = {}
+    for t in titles:
+        if not t in scene_count:
+            scene_count[t] = 0
+        scene_count[t] += 1
+
+    dists = np.zeros((len(unique_titles), num_topics))
+    for i in xrange(len(titles)):
+        dt = doc_topic[i]
+        for j in xrange(len(dt)):
+            dists[revdict[titles[i]],j] += dt[j]
+
+    for title in unique_titles:
+        for j in xrange(num_topics):
+            dists[revdict[title],j] /= scene_count[title]
+
+    fig = plt.figure()
+    r = sbn.heatmap(dists, cmap="BuPu", xticklabels=topic_titles, yticklabels=unique_titles)
+    if savepath:
+        plt.savefig("{}/document_correlation_heatmap.pdf".format(savepath))
     plt.show()
 
 

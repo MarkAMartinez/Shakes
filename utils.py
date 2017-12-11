@@ -23,8 +23,13 @@ def parse_to_vectorized(infile, castfile):
 
 
 def parse_file_to_sections(infile):
-    sections = parse_corpus.process(infile)
+    sections, titles = parse_corpus.process(infile)
     return sections
+
+
+def parse_file_to_sections_and_titles(infile):
+    sections, titles = parse_corpus.process(infile)
+    return sections, titles
 
 
 def parse_castfile_to_dict(castfile):
