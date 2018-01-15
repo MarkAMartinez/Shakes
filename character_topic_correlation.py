@@ -123,6 +123,13 @@ def plot_heatmap(correlations, bh_fdrs, characters, threshold=0.1, savepath=None
     r = sbn.heatmap(correlations, cmap="BuPu", xticklabels=topic_titles, yticklabels=characters)
     if savepath:
         plt.savefig("{}/character_correlation_heatmap.pdf".format(savepath))
+
+    plt.show()
+
+    p = sbn.heatmap(bh_fdrs, cmap="BuPu_r", xticklabels=topic_titles, yticklabels=characters)
+    if savepath:
+        plt.savefig("{}/character_correlation_fdr_heatmap.pdf".format(savepath))
+
     plt.show()
 
 
